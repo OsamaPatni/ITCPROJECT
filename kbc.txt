@@ -1,0 +1,101 @@
+#include<stdio.h>
+int main()
+{
+	system("color 17");
+	int n,c=10000,w=5000,d,e,f,g;
+	
+	char KBC=1;
+		
+	printf("\n*****************KBC***************\n\n");
+	printf("\nRULES:\n");
+	printf("\nA) For each question there will be 4 options");
+	printf("\nB) For each right answer Increment of 10,000");
+	printf("\nC) For each wrong answer Decrement of 5,000");
+	printf("\nD) If FIRST question is wrong User is out of the Game");
+	printf("\nE) If winning amount becomes zero at any point out of 5 question user will be out");
+	printf("\n\nGOOD LUCK :)\n\n\n");
+	
+	switch (KBC)
+	{
+		case 1:
+			printf("Q1) How many provinces do Pakistan have ?\n\n");
+			printf("1.) 4\t\t\t2.) 3\n3.) 2\t\t\t4.) 8\n\n");
+			scanf("%d",&n);
+			if (n==1)
+			{
+				printf("\nCongratulations!\nAnswer is right\nyou have won: %d",c);
+				
+			}
+			else
+			{
+				printf("\nWRONG!\nCorrect answer is 1\nout of the game better luck next time :)");
+				break;
+			}
+		case 2:
+			printf("\n\nQ2) What is capital of Pakistan ?\n\n");
+			printf("1.) Karachi \t\t\t2.) Islamabad\n3.) Multan\t\t\t4.) Lahore\n\n");
+			scanf("%d",&n);
+			if (n==2)
+			{
+				printf("\nCongratulations!\nAnswer is right\nyou have won: %d",d=c+c);
+			}
+			else
+			{
+				printf("\nWRONG!\nCorrect answer is 2\nProceeding to next question\nYour remaining balance is %d",d=c-w);
+			}
+		case 3:
+			printf("\n\nQ3) Imran Khan is the chairman of ?\n\n");
+			printf("1.) N-League\t\t\t2.) MQM\n3.) PTI\t\t\t\t4.) PPP\n\n");
+			scanf("%d",&n);
+			if (n==3)
+			{
+				printf("\nCongratulations!\nAnswer is right\nyou have won: %d",e=d+c);	
+			}
+			else if (d!=3)
+			{
+				if (d==20000)
+				{
+					printf("\nWRONG!\nCorrect answer is 3\nProceeding to next question\nYour remaining balance is %d",e=d-w);
+				}
+				else
+				{
+					printf("\nWRONG!\nCorrect answer is 3\nout of the game better luck next time :)");
+					break;
+				}
+			}
+			
+		case 4:
+			printf("\n\nQ4) Quaid-e-Azam was the first ________ of Pakistan ?\n\n");
+			printf("1.) Governor General\t\t2.) Prime Minister\n3.) President\t\t\t4.) Party-Leader\n\n");
+			scanf("%d",&n);
+			if (n==1)
+			{
+				printf("\nCongratulations!\nAnswer is right\nyou have won: %d",f=e+c);
+				
+			}
+			else if (n!=1)
+			{	
+				printf("\nWRONG!\nCorrect answer is 1\nProceeding to next question\nYour remaining balance is %d",f=e-w);	
+			}
+		case 5:
+			printf("\n\nQ5) CPEC is the contract between ?\n\n");
+			printf("1.) AFG-IRAN\t\t\t2.) IND-CHINA\n3.) PAK-IND\t\t\t4.) PAK-CHINA\n\n");
+			scanf("%d",&n);
+			if (n==4)
+			{
+				printf("\nCongratulations!\nAnswer is right\nyou have won: %d",g=f+c);
+				
+				
+			}
+			else if (n!=4)
+			{	
+				printf("\nWRONG!\nCorrect answer is 4\nYou have won %d",g=f-w);
+				
+			}
+		printf("\n\nTHE END\n\n\n************");
+		break;
+		
+	}
+	
+	return 0;
+}
